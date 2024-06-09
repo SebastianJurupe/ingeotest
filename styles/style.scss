@@ -1,0 +1,20 @@
+@import "./fonts.scss";
+*,
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.contenedor {
+  width: min(88%, 1500px);
+  margin-inline: auto;
+}
