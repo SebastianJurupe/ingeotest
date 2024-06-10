@@ -1,4 +1,13 @@
 @import "./fonts.scss";
+@import "./mixin.scss";
+
+//Creacion de Variables
+$first-color: #123558;
+$second-color: #314c9c;
+$third-color: #286eb5;
+$orange-color: #ff8e2b;
+$green-color: #48905a;
+
 *,
 body {
   padding: 0;
@@ -17,4 +26,162 @@ a {
 .contenedor {
   width: min(88%, 1500px);
   margin-inline: auto;
+}
+
+.contenedor-three {
+  width: min(75%, 1500px);
+  margin-inline: auto;
+}
+
+header {
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+  .top {
+    background: $first-color;
+    .contenedor {
+      display: flex;
+      justify-content: flex-end;
+      gap: 6.3rem;
+      padding-block: 0.5rem;
+      p {
+        display: flex;
+        gap: 8px;
+        align-items: center;
+        font-family: "MontserratLight";
+        color: white;
+        font-size: 15px;
+        font-weight: 300;
+        line-height: 19px;
+      }
+    }
+  }
+  .bottom {
+    padding-block: 2rem;
+    .contenedor {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      .right {
+        img {
+          width: 200px;
+        }
+      }
+      .left {
+        nav {
+          display: flex;
+          align-items: center;
+          gap: 2.5rem;
+          ul {
+            display: flex;
+            align-items: center;
+            gap: 5rem;
+            li {
+              position: relative;
+              a {
+                color: white;
+                font-family: "MontserratRegular";
+                font-size: 16px;
+                font-weight: 400;
+              }
+              &:last-child {
+                border: 3px solid white;
+                padding: 12px 24px;
+                a {
+                  font-weight: 700;
+                }
+                &::after {
+                  content: none;
+                }
+              }
+              &::after {
+                content: "";
+                position: absolute;
+                left: 0;
+                top: -1.5rem;
+                width: 100%;
+                height: 6px;
+                background: white;
+                opacity: 0;
+                transition: all 0.5s ease;
+              }
+              &:hover {
+                a {
+                  font-weight: 700;
+                }
+                &::after {
+                  opacity: 1;
+                }
+              }
+            }
+          }
+          svg {
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+}
+
+.section-banner {
+  height: 100vh;
+  #splide-banner {
+    width: 100%;
+    height: 100%;
+    #splide-banner-track {
+      width: 100%;
+      height: 100%;
+      .splide__slide {
+        width: 100%;
+        height: 100%;
+        background-repeat: no-repeat;
+        background-position: center 1rem;
+        background-size: cover;
+        position: relative;
+        z-index: 1;
+        .contenedor-three {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          height: 100%;
+          h2 {
+            max-width: 48rem;
+            @include title-h2(65px, "MontserratBold", white, 700);
+          }
+          a {
+            width: 18rem;
+            height: 3.75rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            @include enlace-a(
+              white,
+              "MontserratRegular",
+              22px,
+              400,
+              $green-color
+            );
+          }
+        }
+        &::after {
+          content: "";
+          position: absolute;
+          left: 0;
+          top: 0;
+          width: 100%;
+          height: 100%;
+          background: linear-gradient(
+            90deg,
+            #000 42.67%,
+            rgba(0, 0, 0, 0) 93.45%
+          );
+          opacity: 0.4;
+          mix-blend-mode: multiply;
+          z-index: -1;
+        }
+      }
+    }
+  }
 }

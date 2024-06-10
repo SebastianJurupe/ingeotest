@@ -76,4 +76,179 @@ a {
 .contenedor {
   width: min(88%, 1500px);
   margin-inline: auto;
+}
+
+.contenedor-three {
+  width: min(75%, 1500px);
+  margin-inline: auto;
+}
+
+header {
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+}
+header .top {
+  background: #123558;
+}
+header .top .contenedor {
+  display: flex;
+  justify-content: flex-end;
+  gap: 6.3rem;
+  padding-block: 0.5rem;
+}
+header .top .contenedor p {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  font-family: "MontserratLight";
+  color: white;
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 19px;
+}
+header .bottom {
+  padding-block: 2rem;
+}
+header .bottom .contenedor {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+header .bottom .contenedor .right img {
+  width: 200px;
+}
+header .bottom .contenedor .left nav {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+}
+header .bottom .contenedor .left nav ul {
+  display: flex;
+  align-items: center;
+  gap: 5rem;
+}
+header .bottom .contenedor .left nav ul li {
+  position: relative;
+}
+header .bottom .contenedor .left nav ul li a {
+  color: white;
+  font-family: "MontserratRegular";
+  font-size: 16px;
+  font-weight: 400;
+}
+header .bottom .contenedor .left nav ul li:last-child {
+  border: 3px solid white;
+  padding: 12px 24px;
+}
+header .bottom .contenedor .left nav ul li:last-child a {
+  font-weight: 700;
+}
+header .bottom .contenedor .left nav ul li:last-child::after {
+  content: none;
+}
+header .bottom .contenedor .left nav ul li::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: -1.5rem;
+  width: 100%;
+  height: 6px;
+  background: white;
+  opacity: 0;
+  transition: all 0.5s ease;
+}
+header .bottom .contenedor .left nav ul li:hover a {
+  font-weight: 700;
+}
+header .bottom .contenedor .left nav ul li:hover::after {
+  opacity: 1;
+}
+header .bottom .contenedor .left nav svg {
+  cursor: pointer;
+}
+
+.section-banner {
+  height: 100vh;
+}
+.section-banner #splide-banner {
+  width: 100%;
+  height: 100%;
+}
+.section-banner #splide-banner #splide-banner-track {
+  width: 100%;
+  height: 100%;
+}
+.section-banner #splide-banner #splide-banner-track .splide__slide {
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-position: center 1rem;
+  background-size: cover;
+  position: relative;
+  z-index: 1;
+}
+.section-banner #splide-banner #splide-banner-track .splide__slide .contenedor-three {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+}
+.section-banner #splide-banner #splide-banner-track .splide__slide .contenedor-three h2 {
+  max-width: 48rem;
+  position: relative;
+  font-size: 65px;
+  font-family: "MontserratBold";
+  color: white;
+  font-weight: 700;
+}
+.section-banner #splide-banner #splide-banner-track .splide__slide .contenedor-three h2::after {
+  content: "";
+  position: absolute;
+  left: -2rem;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 7px;
+  height: 75%;
+  background: #ff8e2b;
+}
+.section-banner #splide-banner #splide-banner-track .splide__slide .contenedor-three a {
+  width: 18rem;
+  height: 3.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  color: white;
+  font-family: "MontserratRegular";
+  font-size: 22px;
+  font-weight: 400;
+  position: relative;
+  z-index: 1;
+}
+.section-banner #splide-banner #splide-banner-track .splide__slide .contenedor-three a::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: #48905a;
+  transition: all 0.5s ease;
+  z-index: -1;
+}
+.section-banner #splide-banner #splide-banner-track .splide__slide .contenedor-three a:hover::after {
+  width: 20%;
+}
+.section-banner #splide-banner #splide-banner-track .splide__slide::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, #000 42.67%, rgba(0, 0, 0, 0) 93.45%);
+  opacity: 0.4;
+  mix-blend-mode: multiply;
+  z-index: -1;
 }/*# sourceMappingURL=style.css.map */

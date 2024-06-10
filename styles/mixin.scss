@@ -1,0 +1,42 @@
+@mixin title-h2($size, $family, $color, $weight) {
+  position: relative;
+  font-size: $size;
+  font-family: $family;
+  color: $color;
+  font-weight: $weight;
+  &::after {
+    content: "";
+    position: absolute;
+    left: -2rem;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 7px;
+    height: 75%;
+    background: #ff8e2b;
+  }
+}
+
+@mixin enlace-a($color, $family, $size, $weight, $background-after) {
+  color: $color;
+  font-family: $family;
+  font-size: $size;
+  font-weight: $weight;
+  position: relative;
+  z-index: 1;
+  &::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: $background-after;
+    transition: all 0.5s ease;
+    z-index: -1;
+  }
+  &:hover {
+    &::after {
+      width: 20%;
+    }
+  }
+}
