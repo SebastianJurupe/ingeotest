@@ -145,13 +145,14 @@ header {
           flex-direction: column;
           justify-content: center;
           height: 100%;
+          gap: 3rem;
           h2 {
             max-width: 48rem;
             @include title-h2(65px, "MontserratBold", white, 700);
           }
           a {
-            width: 18rem;
-            height: 3.75rem;
+            width: 15rem;
+            height: 3.5rem;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -159,9 +160,11 @@ header {
             @include enlace-a(
               white,
               "MontserratRegular",
-              22px,
+              20px,
               400,
-              $green-color
+              $green-color,
+              $green-color,
+              white
             );
           }
         }
@@ -183,5 +186,39 @@ header {
         }
       }
     }
+  }
+}
+.phrase-section {
+  background: linear-gradient(180deg, #314c9c 0%, #3b98ca 100%);
+  position: relative;
+  z-index: 1;
+  height: 30vh;
+  .contenedor {
+    width: min(71%, 1500px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    h2 {
+      color: white;
+      text-align: center;
+      text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+      font-family: "MontserratBold";
+      font-size: 35px;
+    }
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: url("../assets/fondo-frase.webp");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    opacity: 0.2;
   }
 }

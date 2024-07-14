@@ -29,6 +29,11 @@
         </div>
       </div>
     </section>
+    <section class="phrase-section">
+      <div class="contenedor">
+        <h2>Ingeotest está dedicada a las investigaciones geotécnicas y cuenta con experiencia en los sectores de Construcción, Energía, Minería e Hidrocarburos.</h2>
+      </div>
+    </section>
   </main>
   <script src="script.js"></script>
 </body>

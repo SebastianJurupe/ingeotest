@@ -193,6 +193,7 @@ header .bottom .contenedor .left nav svg {
   flex-direction: column;
   justify-content: center;
   height: 100%;
+  gap: 3rem;
 }
 .section-banner #splide-banner #splide-banner-track .splide__slide .contenedor-three h2 {
   max-width: 48rem;
@@ -213,18 +214,23 @@ header .bottom .contenedor .left nav svg {
   background: #ff8e2b;
 }
 .section-banner #splide-banner #splide-banner-track .splide__slide .contenedor-three a {
-  width: 18rem;
-  height: 3.75rem;
+  width: 15rem;
+  height: 3.5rem;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 10px;
   color: white;
   font-family: "MontserratRegular";
-  font-size: 22px;
+  font-size: 20px;
   font-weight: 400;
   position: relative;
   z-index: 1;
+  transition: all 0.5s ease;
+  border: 1px solid #48905a;
+}
+.section-banner #splide-banner #splide-banner-track .splide__slide .contenedor-three a svg {
+  transition: all 0.5s ease;
 }
 .section-banner #splide-banner #splide-banner-track .splide__slide .contenedor-three a::after {
   content: "";
@@ -236,6 +242,13 @@ header .bottom .contenedor .left nav svg {
   background: #48905a;
   transition: all 0.5s ease;
   z-index: -1;
+}
+.section-banner #splide-banner #splide-banner-track .splide__slide .contenedor-three a:hover {
+  border: 1px solid white;
+  font-weight: 700;
+}
+.section-banner #splide-banner #splide-banner-track .splide__slide .contenedor-three a:hover svg {
+  transform: translateX(2.5rem);
 }
 .section-banner #splide-banner #splide-banner-track .splide__slide .contenedor-three a:hover::after {
   width: 20%;
@@ -251,4 +264,39 @@ header .bottom .contenedor .left nav svg {
   opacity: 0.4;
   mix-blend-mode: multiply;
   z-index: -1;
+}
+
+.phrase-section {
+  background: linear-gradient(180deg, #314c9c 0%, #3b98ca 100%);
+  position: relative;
+  z-index: 1;
+  height: 30vh;
+}
+.phrase-section .contenedor {
+  width: min(71%, 1500px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+.phrase-section .contenedor h2 {
+  color: white;
+  text-align: center;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  font-family: "MontserratBold";
+  font-size: 35px;
+}
+.phrase-section::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: url("../assets/fondo-frase.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  left: 0;
+  top: 0;
+  z-index: -1;
+  opacity: 0.2;
 }/*# sourceMappingURL=style.css.map */
